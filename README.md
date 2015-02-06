@@ -8,6 +8,8 @@ This fork
   https://www.youtube.com/watch?v=pw4fKkyPPg8)
 - Adds coffee script + cjsx support (the original src/js/app.js has been
   rewritten to app.cjsx as an example)
+- Drops automatic iOS app skeleton generation which was based on glup (we need
+  a crossplatform solution anyway)
 
 How to use
 ----------
