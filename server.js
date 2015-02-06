@@ -1,8 +1,14 @@
-var express = require('express');
-var app = express();
+var webpack = require('webpack');
+var WebpackDevServer = require('webpack-dev-server');
+var config = require('./webpack.config');
 
-app.use(express.static('./www'));
+new WebpackDevServer(webpack(config), {
+  publicPath: config.output.publicPath,
+  hot: true
+}).listen(3000, 'localhost', function (err, result) {
+  if (err) {
+    console.log(err);
+  }
 
-var server = app.listen(process.env.PORT || 8000, function() {
-	console.log('Local Server ready on port %d', server.address().port);
+  console.log('Listening at localhost:3000');
 });

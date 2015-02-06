@@ -1,24 +1,27 @@
 TouchstoneJS Starter
 ====================
 
-Reference TouchstoneJS App with examples of all UI components.
+This fork
 
-To build and preview locally, run the `gulp dev` task. It will build the app with browserify, and start a preview server at [localhost:8000](http://localhost:8000).
+- Uses webpack instead of glup
+- Adds live editing support using webpack-hot-loader + react hot loader (see.
+  https://www.youtube.com/watch?v=pw4fKkyPPg8)
+- Adds coffee script + cjsx support (the original src/js/app.js has been
+  rewritten to app.cjsx as an example)
 
-The source for the app is in the `/src` folder; `/www` and `/platforms` are managed by cordova.
+How to use
+----------
 
-To build for iOS, run `gulp prepare` then build the XCode project `/platforms/ios/Touchstone`.
+Very simple
 
-More documentation and examples to come soon.
+    cd to-this-repo
+    npm install .
+    npm start
 
+Open your browser to http://127.0.0.1:3000/
 
-# Feedback / Questions?
+*Hint*
 
-Let us know! Contact us at [thinkmill.com.au](http://www.thinkmill.com.au/) or open an issue.
-
-We're busily building the TouchstoneJS framework and welcome any ideas / contributions / PRs.
-
-
-# License
-
-MIT. Copyright (c) 2014 Thinkmill Pty Ltd.
+Edit source files and watch UI macigally update with no browser refresh and
+without loosing react component state. You can open it on multiple
+devices/browser at once.
